@@ -59,7 +59,7 @@ const login = () => {
   return (
     <div className="container">
       <div>
-      {isAuthenticated ? (
+      {!isAuthenticated ? (
         <button onClick={login} className="button button-login">
           Login
         </button> ) : (
