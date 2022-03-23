@@ -21,9 +21,13 @@ export default function Login() {
   // const currentUser = Moralis.User.current();
 
 
-  React.useEffect( async () => {
-    await enableWeb3()
-},[])
+  React.useEffect(() => {
+    async function fetchWeb3() {
+      await enableWeb3()
+    }
+    fetchWeb3();
+
+},[enableWeb3])
 
   const fetchTransactions = async () => {
     // get mainnet transactions for the current user
